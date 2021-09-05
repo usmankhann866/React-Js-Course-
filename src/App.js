@@ -5,9 +5,17 @@ import './App.css';
 import { Component } from "react";
 // Now to import MenuComponent from Components
 import Menu from "./Components/MenuComponent"; 
+import { DISHES } from './Shared/dishes';
+
 
 class App extends Component{
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      dishes: DISHES
+    };
+  }
+  
   render(){
   
    return(
@@ -18,7 +26,7 @@ class App extends Component{
   <NavbarBrand href="/"> Musa Resturant </NavbarBrand>
   </div> 
    </Navbar>
-   <Menu />
+   <Menu dishes={this.state.dishes} />
    </div>
    
   );
