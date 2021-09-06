@@ -1,36 +1,19 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css"
-import {Navbar, NavbarBrand} from 'reactstrap';
-import './App.css';
-import { Component } from "react";
-// Now to import MenuComponent from Components
-import Menu from "./Components/MenuComponent"; 
-import { DISHES } from './Shared/dishes';
+import Heading from './Heading';
+import Paragraph from './Paragraph';
+import List from './List';
 
 
-class App extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      dishes: DISHES
-    };
-  }
+
+function App(){
+
+return(
+<div>
+  <Heading />
+  <Paragraph />
+  <List />
   
-  render(){
-  
-   return(
-      <div> 
-   
-   <Navbar dark color="primary">
-  <div className="container">
-  <NavbarBrand href="/"> Musa Resturant </NavbarBrand>
-  </div> 
-   </Navbar>
-   <Menu dishes={this.state.dishes} />
-   </div>
-   
-  );
-  }
+</div>
+);
 }
-
 export default App;
